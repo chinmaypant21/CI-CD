@@ -20,7 +20,7 @@ jobs:
 
   test:
     machine: 
-      image: circleci/node@5.1.0
+      image: cimg/node:19.5.0
     steps:
       - attach_workspace:
           at: .
