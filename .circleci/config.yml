@@ -19,8 +19,8 @@ jobs:
             - .
 
   test:
-    machine: 
-      image: cimg/node:19.5.0
+    docker:
+      - image: cimg/node:19.5.0
     steps:
       - attach_workspace:
           at: .
