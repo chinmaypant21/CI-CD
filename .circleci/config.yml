@@ -37,7 +37,10 @@ jobs:
       - attach_workspace:
           at: .
       - checkout
-      - run: aws s3 sync ./app/build s3://test-circleci-demo
+      - run: 
+        - command: |
+            aws s3 mb s3://test2-circleci 
+            aws s3 sync ./app/build s3://test2-circleci --acl public-read
 
 
 workflows:
