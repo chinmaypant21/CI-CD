@@ -39,8 +39,8 @@ jobs:
       - checkout
       - run: 
           command: |
-            aws s3 mb s3://test2-circleci 
-            aws s3 sync ./app/build s3://test2-circleci --acl public-read
+            # aws s3 mb s3://test2-circleci
+            aws s3 sync ./app/build s3://test-circleci-demo --acl public-read
 
 
 workflows:
